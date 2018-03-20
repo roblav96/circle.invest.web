@@ -1,14 +1,14 @@
 {
-	"extends": "tsconfig.json",
+	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"module": "commonjs"
 	},
 	"exclude": [
-		"src/client",
-		"src/assets",
-		"config",
-		"public",
-		"dist",
-		"node_modules"
+		"./src/client",
+		"./src/assets",
+		"./config",
+		"./public",
+		"./dist",
+		"./node_modules"
 	]
 }

@@ -1,21 +1,13 @@
 // 
-
 global.NODE_ENV = process.env.NODE_ENV
 global.DEVELOPMENT = NODE_ENV == 'development'
 global.PRODUCTION = NODE_ENV == 'production'
-
-process.NAME = process.env.NAME
-process.VERSION = process.env.VERSION
-process.DOMAIN = process.env.DOMAIN
-
 // 
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import Buefy, { BuefyConfig } from 'buefy'
-
-
 
 Vue.config.productionTip = false
 Vue.config.performance = false
@@ -31,9 +23,8 @@ Vue.use(Buefy, {
 	defaultTooltipType: 'is-dark',
 } as BuefyConfig)
 
-
-
-import('@/client/vm')
+import '@/client/vm'
+// import('@/client/vm')
 // require('@/client/vm')
 
 

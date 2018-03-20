@@ -2,7 +2,7 @@
 
 import Vue, { ComponentOptions } from 'vue'
 import Vuex, { Store } from 'vuex'
-import breakpoint from '@/client/store/breakpoint'
+import breakpoint from '@/client/stores/breakpoint.store'
 
 
 
