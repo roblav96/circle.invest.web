@@ -11,8 +11,8 @@
 		<div class="container">
 
 			<div class="navbar-brand">
-				<router-link class="navbar-item" :to="{ name: 'home' }" active-class="" exact-active-class="">
-					<span class="">Circle Invest</span>
+				<router-link class="navbar-item" :to="{ name: 'home' }" active-class exact-active-class>
+					Circle Invest
 				</router-link>
 				<div class="fx-fill is-hidden-desktop"></div>
 				<a class="navbar-item is-hidden-desktop" v-on:click="showMobileMenu = !showMobileMenu">

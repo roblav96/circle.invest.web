@@ -26,4 +26,11 @@ Vue.use(Buefy, {
 
 require('@/client/vm')
 
+// dynamic import all
+// let load = require.context('./store/', true, /\.ts$/)
+// load.keys().forEach(function(file) {
+// 	console.log('file >', file)
+// 	// load(file)
+// })
+
 

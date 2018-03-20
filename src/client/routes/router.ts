@@ -2,6 +2,7 @@
 
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
+import Home from '@/client/routes/home/home'
 
 
 
@@ -9,7 +10,8 @@ export const routes = [
 
 	{
 		name: 'home', path: '/',
-		component: import('@/client/routes/home/home')
+		component: Home,
+		// component: import('@/client/routes/home/home')
 		// component: () => import('@/client/routes/home/home'),
 	},
 

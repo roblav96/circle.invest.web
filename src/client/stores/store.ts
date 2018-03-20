@@ -24,12 +24,12 @@ export default new Vuex.Store<State>({
 
 
 // import all files in store
-let __file = module.id.split('/').pop()
-let load = require.context('./', false, /\.ts$/)
-load.keys().filter(v => v.split('/').pop() != __file).forEach(function(key) {
-	console.log('key >', key)
-	load(key)
-})
+// let __file = module.id.split('/').pop()
+// let load = require.context('./', false, /\.ts$/)
+// load.keys().filter(v => v.split('/').pop() != __file).forEach(function(key) {
+// 	console.log('key >', key)
+// 	load(key)
+// })
 
 
 
