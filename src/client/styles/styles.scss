@@ -48,13 +48,6 @@ $colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 // 
 // ████  EXTERNALS  ████
 // 
-// https://getbootstrap.com
-// @import '~bootstrap/scss/bootstrap';
-// @import '~bootstrap/scss/functions';
-// @import '~bootstrap/scss/variables';
-// @import '~bootstrap/scss/mixins';
-// @import '~bootstrap/scss/utilities';
-// 
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 // 
