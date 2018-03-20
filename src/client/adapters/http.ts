@@ -7,50 +7,27 @@ import vm from '@/client/vm'
 
 
 
-declare global {
-	namespace Http {
-		interface RequestConfig extends got.GotJSONOptions {
-			url: string
-			query: any
-			silent: boolean
-			isproxy: boolean
-		}
-	}
-}
-
 function request(config: Partial<Http.RequestConfig>): Promise<any> {
 	return Promise.resolve().then(function() {
-
 		config.json = true
-		let pconfig = config.isproxy ? core.object.clone(config) : undefined
+
+		if (config.corsproxy) {
+			config.body = core.json.clone(config)
+			return got.post(process.DOMAIN + '/api/proxy', config as any).then(({ body }) => body)
+		}
 
 		if (!Number.isFinite(config.timeout as any)) config.timeout = 10000;
-		if (!Number.isFinite(config.retries as any)) config.retries = 5;
+		if (!Number.isFinite(config.retries as any)) config.retries = 9;
 
 		config.silent = config.silent || PRODUCTION
-		if (!config.silent) console.log('%c▶ ' + config.method + ' ' + config.url + ' ▶', 'font-weight: 300;', (JSON.stringify(config.query || config.body || {})).substring(0, 64));
+		if (!config.silent) console.log('%c▶ ' + config.method + ' ' + config.url + ' ▶', 'font-weight: 300;', (JSON.stringify(config.query || config.body || '')).substring(0, 64));
 
 		if (config.url[0] == '/') config.url = process.DOMAIN + '/api' + config.url;
-
-		if (!config.headers) config.headers = {};
-		Object.assign(config.headers, {
-			'x-version': process.VERSION,
-			'x-platform': 'web',
-			'x-silent': config.silent,
-		})
-		core.object.compact(config.headers)
-
-		if (config.isproxy) {
-			config.url = process.DOMAIN + '/api/proxy'
-			config.body = pconfig
-			config.method = 'POST'
-		}
 
 		return got(config.url, config as any).then(({ body }) => body)
 
 	}).catch(function(error: got.GotError) {
 		let message = _.get(error, 'statusMessage', error.message)
-
 		if (_.has(error, 'response.body.message') && error.response.body.message != message) {
 			message += `: "${error.response.body.message}"`
 		}
@@ -79,6 +56,21 @@ export function post<B = any, T = any>(url: string, body?: B, config = {} as Par
 	config.method = 'POST'
 	if (body) config.body = body as any;
 	return request(config)
+}
+
+
+
+
+
+declare global {
+	namespace Http {
+		interface RequestConfig extends got.GotJSONOptions {
+			url: string
+			query: any
+			silent: boolean
+			corsproxy: boolean
+		}
+	}
 }
 
 
