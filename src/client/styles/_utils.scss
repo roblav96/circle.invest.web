@@ -1,0 +1,45 @@
+// 
+// 
+// 
+// ████  MERGERS  ████
+// 
+$colors: map-merge($colors, ('primary':($primary, $primary-invert)));
+$colors: map-merge($colors, ('primary-light':($primary-light, $primary-light-invert)));
+$colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
+$colors: map-merge($colors, ('secondary-light':($secondary-light, $secondary-light-invert)));
+$colors: map-merge($colors, ('accent':($accent, $accent-invert)));
+// 
+// 
+// 
+// ████  ANIMATIONS  ████
+// 
+$speed-slowest: 500ms;
+$speeds: ($speed, $speed-slow, $speed-slower, $speed-slowest);
+// 
+.is-animated-loading {
+	opacity: 0 !important;
+}
+
+.is-animated {
+	animation-duration: $speed !important;
+}
+
+.is-animated-slow {
+	animation-duration: $speed-slow !important;
+}
+
+.is-animated-slower {
+	animation-duration: $speed-slower !important;
+}
+
+.is-animated-slowest {
+	animation-duration: $speed-slowest !important;
+}
+
+.is-animated-infinite {
+	animation-iteration-count: infinite !important;
+}
+
+// 
+// 
+//

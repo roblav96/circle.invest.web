@@ -3,7 +3,7 @@
 @import '~bulma/sass/utilities/functions';
 @import '~bulma/sass/utilities/initial-variables';
 // 
-// ████  THEME  ████
+// ████  COLORS  ████
 // 
 $primary: #9855D4;
 $primary-light: #AF6EE8;
@@ -38,16 +38,9 @@ $family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Ver
 // https://buefy.github.io
 @import '~buefy/src/scss/utils/all';
 // 
-// ████  MERGES  ████
-// 
-$colors: map-merge($colors, ('primary':($primary, $primary-invert)));
-$colors: map-merge($colors, ('primary-light':($primary-light, $primary-light-invert)));
-$colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
-$colors: map-merge($colors, ('secondary-light':($secondary-light, $secondary-light-invert)));
-$colors: map-merge($colors, ('accent':($accent, $accent-invert)));
-// 
 // ████  EXTERNALS  ████
 // 
+@import './utils';
 @import '~bulma';
 @import '~buefy/src/scss/buefy';
 // 
