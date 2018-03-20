@@ -1,0 +1,22 @@
+{
+	"folders": [{
+		"name": "CLIENT.circle.invest.web",
+		"path": ".",
+		"folder_exclude_patterns": [
+			"public/img",
+			"assets",
+			"server",
+			"dist",
+			"node_modules"
+		],
+		"file_exclude_patterns": [
+			"*.tsconfig.*",
+			"*favicon*",
+			"*nginx*",
+			"*server*",
+			"*debug*",
+			"*license*",
+			"*readme*"
+		]
+	}]
+}
