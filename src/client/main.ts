@@ -2,6 +2,7 @@
 global.NODE_ENV = process.env.NODE_ENV
 global.DEVELOPMENT = NODE_ENV == 'development'
 global.PRODUCTION = NODE_ENV == 'production'
+global.Promise = require('bluebird')
 // 
 
 import Vue from 'vue'
@@ -23,8 +24,6 @@ Vue.use(Buefy, {
 	defaultTooltipType: 'is-dark',
 } as BuefyConfig)
 
-import '@/client/vm'
-// import('@/client/vm')
-// require('@/client/vm')
+require('@/client/vm')
 
 

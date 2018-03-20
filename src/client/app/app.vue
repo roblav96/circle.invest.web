@@ -1,18 +1,13 @@
 <!--  -->
 <script lang="ts" src="./app.ts"></script>
 
-<style lang="scss" src="@/client/styles/all.scss"></style>
-<style src="@/client/styles/styles.css"></style>
-
 <style>
-/**/
-
 /**/
 
 </style>
 
 <template>
-	<div id="app" :class="{ 'animated-loading': initing, 'animated animated-fastester fadeIn': !initing }">
+	<div id="app" :class="{ 'animated-loading': initing === true, 'animated animated-fastester fadeIn': initing === false }">
 		<v-navbar></v-navbar>
 
 		<router-view></router-view>

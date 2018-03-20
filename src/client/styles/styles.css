@@ -1,5 +1,8 @@
 /**/
 
+
+/*// ████  FIXES  ████*/
+
 span.icon.t-bold > i.mdi::before {
 	font-weight: bold;
 }
@@ -9,6 +12,48 @@ img.is-png {
 	backface-visibility: hidden;
 }
 
-/*// ████  BUEFY PATCHES  ████*/
+
+/*// ████  ANIMATIONS  ████*/
+
+.animated-loading {
+	opacity: 0 !important;
+}
+
+.will-animated {
+	will-change: transform, opacity !important;
+}
+
+.animated-slow {
+	animation-duration: 2s !important;
+}
+
+.animated-slower {
+	animation-duration: 3s !important;
+}
+
+.animated-slowest {
+	animation-duration: 5s !important;
+}
+
+.animated-quick {
+	animation-duration: 0.75s !important;
+}
+
+.animated-fast {
+	animation-duration: 0.5s !important;
+}
+
+.animated-faster {
+	animation-duration: 0.3s !important;
+}
+
+.animated-fastest {
+	animation-duration: 0.2s !important;
+}
+
+.animated-fastester {
+	animation-duration: 0.1s !important;
+}
+
 
 /**/

@@ -13,32 +13,6 @@ export const routes = [
 		// component: () => import('@/client/routes/home/home'),
 	},
 
-	{
-		name: 'search', path: '/search',
-		dname: 'Search', icon: 'magnify', bold: true,
-		component: import('@/client/routes/search/search')
-		// component: () => import('@/client/routes/search/search'),
-	},
-
-	{
-		name: 'account', path: '/account',
-		dname: 'Account', icon: 'security-account',
-		component: import('@/client/routes/account/account')
-		// component: () => import('@/client/routes/account/account'),
-	},
-
-	{
-		name: 'product', path: '/product',
-		component: import('@/client/routes/product/product')
-		// component: () => import('@/client/routes/product/product'),
-	},
-
-	{
-		name: 'takedown', path: '/takedown',
-		component: import('@/client/routes/takedown/takedown')
-		// component: () => import('@/client/routes/takedown/takedown'),
-	},
-
 	{ path: '*', redirect: { name: 'home' } },
 
 ] as Array<RouteConfig>
