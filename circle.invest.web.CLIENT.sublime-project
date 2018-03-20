@@ -1,19 +1,21 @@
 {
 	"folders": [{
-		"name": "phishyapps.com.SERVER",
+		"name": "circle.invest.web.CLIENT",
 		"path": ".",
 		"folder_exclude_patterns": [
-			"public",
+			"public/img",
 			"assets",
-			"client",
+			"server",
 			"dist",
 			"node_modules"
 		],
 		"file_exclude_patterns": [
+			"*.sublime*",
 			"*.gitignore*",
 			"*.tsconfig.*",
-			"*vue*",
-			"*client*",
+			"*favicon*",
+			"*nginx*",
+			"*server*",
 			"*debug*",
 			"*license*",
 			"*readme*"

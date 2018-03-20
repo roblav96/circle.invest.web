@@ -4,6 +4,10 @@
 <style>
 /**/
 
+html.has-navbar-fixed-top .hero.is-fullheight {
+	min-height: calc(100vh - 3.25rem);
+}
+
 </style>
 
 <template>

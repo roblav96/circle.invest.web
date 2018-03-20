@@ -28,6 +28,9 @@ const router = new VueRouter({
 })
 
 router.afterEach(function(to, from) {
+	console.warn('router.afterEach')
+	console.log('to ->', to)
+	console.log('from ->', from)
 	window.scrollTo({ top: 0, behavior: 'instant' })
 })
 

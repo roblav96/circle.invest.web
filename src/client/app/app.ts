@@ -19,7 +19,7 @@ export default class extends Vue {
 	mounted() {
 		setTimeout(() => this.initing = false, 1)
 		setTimeout(() => delete this.initing, 300)
-		window.scrollTo({ top: 0, behavior: 'instant' })
+		// setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 100)
 	}
 
 }

@@ -6,21 +6,30 @@
 // 
 // ████  COLORS  ████
 // 
-$primary-dark: #4D3E71;
-$primary: #6B5995;
-$primary-light: #807AB9;
-$secondary-dark: #30A7D3;
-$secondary: #3FBCE8;
-$secondary-light: #6DCCEF;
-$accent: #00AF90;
+$light: #F6F6F6;
+$dark: #1F2524;
+// 
+$cyan: #54BBEB;
+$green: #06B07D;
+$yellow: #F8D03E;
+$red: #E2595B;
+// 
+$primary: #7360A1;
+$secondary: #7C9DD0;
+$accent: #577C87;
+// $primary: #8365AA;
+// $secondary: #55C98F;
+// $primary-dark: #4D3E71;
+// $primary: #6B5995;
+// $primary-light: #807AB9;
+// $secondary-dark: #30A7D3;
+// #58BBEB $secondary: #3FBCE8;
+// $secondary-light: #6DCCEF;
+// $accent: #00AF90;
 // $accent: #00B080;
 // 
-$primary-dark-invert: findColorInvert($primary-dark);
 $primary-invert: findColorInvert($primary);
-$primary-light-invert: findColorInvert($primary-light);
-$secondary-dark-invert: findColorInvert($secondary-dark);
 $secondary-invert: findColorInvert($secondary);
-$secondary-light-invert: findColorInvert($secondary-light);
 $accent-invert: findColorInvert($accent);
 // 
 // ████  VARIABLES  ████
@@ -43,6 +52,12 @@ $family-monospace: ('IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Ver
 @import '~bulma/sass/utilities/all';
 // https://buefy.github.io
 @import '~buefy/src/scss/utils/all';
+// 
+// ████  MERGERS  ████
+// 
+$colors: map-merge($colors, ('primary':($primary, $primary-invert)));
+$colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
+$colors: map-merge($colors, ('accent':($accent, $accent-invert)));
 // 
 // ████  EXTERNALS  ████
 // 

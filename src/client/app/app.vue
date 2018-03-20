@@ -2,7 +2,7 @@
 <script lang="ts" src="./app.ts"></script>
 
 <style lang="scss" src="@/client/styles/_vendors.scss"></style>
-<style lang="scss" src="@/client/styles/theme.scss"></style>
+<style lang="scss" src="@/client/styles/variables.scss"></style>
 <style lang="css" src="@/client/styles/styles.css"></style>
 
 <style>

@@ -1,21 +1,19 @@
 {
 	"folders": [{
-		"name": "CLIENT.circle.invest.web",
+		"name": "circle.invest.web.SERVER",
 		"path": ".",
 		"folder_exclude_patterns": [
-			"public/img",
+			"public",
 			"assets",
-			"server",
+			"client",
 			"dist",
 			"node_modules"
 		],
 		"file_exclude_patterns": [
-			"*.sublime*",
 			"*.gitignore*",
 			"*.tsconfig.*",
-			"*favicon*",
-			"*nginx*",
-			"*server*",
+			"*vue*",
+			"*client*",
 			"*debug*",
 			"*license*",
 			"*readme*"
