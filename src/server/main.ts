@@ -1,5 +1,5 @@
 // 
-import './__process'
+import './_process'
 // if (DEVELOPMENT) process.INSTANCES = 1;
 process.INSTANCES = 1
 // 

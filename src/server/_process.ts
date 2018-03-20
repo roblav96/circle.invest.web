@@ -1,17 +1,13 @@
 // 
-import 'source-map-support/register'
-import * as eyes from 'eyes'
-eyes.defaults.maxLength = 65536
-eyes.defaults.showHidden = true
-// 
 
+import 'source-map-support/register'
 import chalk from 'chalk'
+import * as eyes from 'eyes'
 import * as os from 'os'
 import * as cluster from 'cluster'
 import * as path from 'path'
 import * as ee3 from 'eventemitter3'
 import * as moment from 'moment'
-import * as dotenv from 'dotenv'
 
 
 
@@ -25,8 +21,6 @@ process.PRIMARY = process.INSTANCE == 0
 process.MASTER = cluster.isMaster
 process.WORKER = cluster.isWorker
 
-dotenv.config({ path: path.resolve(process.cwd(), 'config/server.' + NODE_ENV + '.env') })
-dotenv.config({ path: path.resolve(process.cwd(), 'config/server.env') })
 process.NAME = process.env.npm_package_name
 process.VERSION = process.env.npm_package_version
 process.DOMAIN = (DEVELOPMENT ? 'http://dev.' : 'https://') + process.env.npm_package_domain

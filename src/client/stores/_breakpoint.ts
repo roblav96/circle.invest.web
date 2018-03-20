@@ -5,7 +5,9 @@
 // ██████████████████████████████████████████████████████████████████████████████████████████████████████
 // 
 
+import Vuex, { Store } from 'vuex'
 import _ from 'lodash'
+import store from '@/client/stores/store'
 
 
 
@@ -18,7 +20,7 @@ const breakpoint = {
 	mobileOnly: false, fullhdOnly: false,
 }
 update()
-export default breakpoint
+store.registerModule('breakpoint', { state: breakpoint })
 
 
 

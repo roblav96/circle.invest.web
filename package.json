@@ -53,6 +53,7 @@
 		"@types/node-forge": "latest",
 		"@types/source-map-support": "latest",
 		"@types/uws": "latest",
+		"@types/webpack": "latest",
 		"@vue/cli-plugin-typescript": "latest",
 		"@vue/cli-service": "latest",
 		"chalk": "latest",
