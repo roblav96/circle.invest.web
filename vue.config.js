@@ -14,8 +14,8 @@ global.NODE_ENV = process.env.NODE_ENV
 global.DEVELOPMENT = NODE_ENV == 'development'
 global.PRODUCTION = NODE_ENV == 'production'
 
-console.info('process.env.NODE_ENV >')
-eyes.inspect(process.env.NODE_ENV)
+console.info('process.env >')
+eyes.inspect(process.env)
 
 module.exports = {
 
