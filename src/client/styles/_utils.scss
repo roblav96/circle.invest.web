@@ -3,8 +3,10 @@
 // 
 // ████  MERGERS  ████
 // 
+$colors: map-merge($colors, ('primary-dark':($primary-dark, $primary-dark-invert)));
 $colors: map-merge($colors, ('primary':($primary, $primary-invert)));
 $colors: map-merge($colors, ('primary-light':($primary-light, $primary-light-invert)));
+$colors: map-merge($colors, ('secondary-dark':($secondary-dark, $secondary-dark-invert)));
 $colors: map-merge($colors, ('secondary':($secondary, $secondary-invert)));
 $colors: map-merge($colors, ('secondary-light':($secondary-light, $secondary-light-invert)));
 $colors: map-merge($colors, ('accent':($accent, $accent-invert)));

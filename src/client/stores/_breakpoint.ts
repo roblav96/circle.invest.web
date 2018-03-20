@@ -19,10 +19,8 @@ const breakpoint = {
 	widescreenOnly: false, widescreenAndDown: false, widescreenAndUp: false,
 	mobileOnly: false, fullhdOnly: false,
 }
+
 update()
-store.registerModule('breakpoint', { state: breakpoint })
-
-
 
 function update() {
 	let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
@@ -66,5 +64,7 @@ function update() {
 
 const onresize = _.throttle(update, 300, { leading: false })
 window.addEventListener('resize', onresize, { passive: true })
+
+store.registerModule('breakpoint', { state: breakpoint })
 
 

@@ -6,14 +6,19 @@
 // 
 // ████  COLORS  ████
 // 
-$primary: #9855D4;
-$primary-light: #AF6EE8;
-$secondary: #FDD600;
-$secondary-light: #FDE876;
-$accent: #562F72;
+$primary-dark: #4D3E71;
+$primary: #6B5995;
+$primary-light: #807AB9;
+$secondary-dark: #30A7D3;
+$secondary: #3FBCE8;
+$secondary-light: #6DCCEF;
+$accent: #00AF90;
+// $accent: #00B080;
 // 
+$primary-dark-invert: findColorInvert($primary-dark);
 $primary-invert: findColorInvert($primary);
 $primary-light-invert: findColorInvert($primary-light);
+$secondary-dark-invert: findColorInvert($secondary-dark);
 $secondary-invert: findColorInvert($secondary);
 $secondary-light-invert: findColorInvert($secondary-light);
 $accent-invert: findColorInvert($accent);
