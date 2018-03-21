@@ -12,6 +12,7 @@
 
 <template>
 	<div id="app" :class="{ 'is-animated-loading': initing === true, 'is-animated fade-in': initing === false }">
+
 		<v-navbar></v-navbar>
 
 		<router-view></router-view>
@@ -29,5 +30,6 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
 </template>

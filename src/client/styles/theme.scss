@@ -1,0 +1,34 @@
+// 
+// 
+// 
+// ████  COLORS  ████
+// 
+$light: #F6F6F6;
+$dark: #2B2B2B;
+// $dark: #1F2524;
+// 
+$cyan: #4CC5E6;
+$green: #00C283;
+$yellow: #F8D03E;
+$red: #E2595B;
+// 
+$primary: #8861A7;
+$primary-dark: #4D3E71;
+$secondary: $green;
+$accent: $cyan;
+// 
+// #42BCE8;
+// #00B080;
+// #4D3E71;
+// #42BCE8;
+// #8365AA;
+// 
+// ████  INVERTS  ████
+// 
+$primary-invert: findColorInvert($primary);
+$primary-dark-invert: findColorInvert($primary-dark);
+$secondary-invert: findColorInvert($secondary);
+$accent-invert: findColorInvert($accent);
+// 
+// 
+//

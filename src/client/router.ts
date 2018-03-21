@@ -2,7 +2,7 @@
 
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '@/client/routes/home/home'
+import _ from 'lodash'
 
 
 
@@ -10,9 +10,7 @@ export const routes = [
 
 	{
 		name: 'home', path: '/',
-		component: Home,
-		// component: import('@/client/routes/home/home')
-		// component: () => import('@/client/routes/home/home'),
+		component: () => import('@/client/routes/home/home'),
 	},
 
 	{ path: '*', redirect: { name: 'home' } },
@@ -23,15 +21,12 @@ export const routes = [
 
 const router = new VueRouter({
 	routes, mode: 'history',
-	// linkActiveClass: 'is-active',
 	linkExactActiveClass: 'is-active',
+	// linkActiveClass: 'is-active',
 })
 
 router.afterEach(function(to, from) {
-	console.warn('router.afterEach')
-	console.log('to ->', to)
-	console.log('from ->', from)
-	window.scrollTo({ top: 0, behavior: 'instant' })
+	_.delay(window.scrollTo, !from.name ? 100 : 1, { top: 0, behavior: 'instant' })
 })
 
 export default router

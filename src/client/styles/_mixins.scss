@@ -1,0 +1,46 @@
+// 
+// 
+// 
+// ████  MIXINS  ████
+// 
+$breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
+// 
+@mixin with-breakpoints($class) {
+	.#{$class} {
+		@content;
+	}
+	@include mobile {
+		.#{$class}-mobile {
+			@content;
+		}
+	}
+	@include tablet {
+		.#{$class}-tablet {
+			@content;
+		}
+	}
+	@include touch {
+		.#{$class}-touch {
+			@content;
+		}
+	}
+	@include desktop {
+		.#{$class}-desktop {
+			@content;
+		}
+	}
+	@include widescreen {
+		.#{$class}-widescreen {
+			@content;
+		}
+	}
+	@include fullhd {
+		.#{$class}-fullhd {
+			@content;
+		}
+	}
+}
+
+// 
+// 
+//
