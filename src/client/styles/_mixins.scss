@@ -9,16 +9,6 @@ $breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
 	.#{$class} {
 		@content;
 	}
-	@include mobile {
-		.#{$class}-mobile {
-			@content;
-		}
-	}
-	@include tablet {
-		.#{$class}-tablet {
-			@content;
-		}
-	}
 	@include touch {
 		.#{$class}-touch {
 			@content;
@@ -26,16 +16,6 @@ $breakpoints: ('mobile', 'tablet', 'touch', 'desktop', 'widescreen', 'fullhd');
 	}
 	@include desktop {
 		.#{$class}-desktop {
-			@content;
-		}
-	}
-	@include widescreen {
-		.#{$class}-widescreen {
-			@content;
-		}
-	}
-	@include fullhd {
-		.#{$class}-fullhd {
 			@content;
 		}
 	}

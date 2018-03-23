@@ -13,6 +13,11 @@ export const routes = [
 		component: () => import('@/client/routes/home/home'),
 	},
 
+	{
+		name: 'storybook', path: '/storybook',
+		component: () => import('@/client/routes/storybook/storybook'),
+	},
+
 	{ path: '*', redirect: { name: 'home' } },
 
 ] as Array<RouteConfig>
