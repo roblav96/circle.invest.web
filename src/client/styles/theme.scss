@@ -25,10 +25,10 @@ $accent: $cyan;
 // 
 // ████  INVERTS  ████
 // 
-$primary-invert: findColorInvert($primary);
-$primary-dark-invert: findColorInvert($primary-dark);
-$secondary-invert: findColorInvert($secondary);
-$accent-invert: findColorInvert($accent);
+$primary-invert: inverted($primary);
+$primary-dark-invert: inverted($primary-dark);
+$secondary-invert: inverted($secondary);
+$accent-invert: inverted($accent);
 // 
 // 
 //
